@@ -11,8 +11,7 @@
 <form class="form-signin" action="" method="POST">
   <img
     class="mb-4"
-    src="{{ url_for('static', filename='img/flask.svg')}}"
-    alt=""
+    src="{{ url_for('static', filename='img/flask.svg')}}" 
     width="72"
     height="72"
   />
@@ -24,6 +23,8 @@
     name="usuario"
     class="form-control"
     placeholder="Usuario"
+    minlength="4"
+    maxlength="15"
     required
     autofocus
   />
@@ -35,6 +36,7 @@
     name="password"
     class="form-control"
     placeholder="Password"
+    minlength="5"
     required
   />
   <!-- <div class="checkbox mb-3">

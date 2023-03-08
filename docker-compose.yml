@@ -1,0 +1,23 @@
+version: '3.3'
+
+services:
+  mysql:
+    image: mysql:5
+    environment:
+        - MYSQL_DATABASE=tienda
+        - MYSQL_USER=tesla
+        - MYSQL_ROOT_PASSWORD=admin678
+        - MYSQL_PORT=3306
+    ports:
+        - 3307:3306
+    volumes:
+        - ./mysql_data:/var/lib/mysql
+
+  myadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      MYSQL_ROOT_PASSWORD: admin123
+      PMA_HOST: mysql
+    ports:
+      - 8080:80
+
