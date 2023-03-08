@@ -8,7 +8,7 @@
 {% endblock %}
 
 {% block body %}
-<form class="form-signin" action="" method="GET">
+<form class="form-signin" action="" method="POST">
   <img
     class="mb-4"
     src="{{ url_for('static', filename='img/flask.svg')}}"
@@ -21,7 +21,7 @@
   <input
     type="text"
     id="usuario"
-    name="usuario "
+    name="usuario"
     class="form-control"
     placeholder="Usuario"
     required
