@@ -1,0 +1,8 @@
+server {
+    listen 80;
+    server_name 138.197.101.68;
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/home/eduardo/python-web/python-web.sock;
+      }
+  }

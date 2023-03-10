@@ -1,0 +1,13 @@
+[Unit]
+Description=Servicio para la aplicacion python-web
+After=network.target
+
+[Service]
+User=eduardo
+Group=www-data
+WorkiningDirectory=/home/eduardo/python-web
+Environment="PATH=/home/eduardo/python-web/env/bin"
+ExecStart=/home/eduardo/python-web/env/bin/gunicourn --workers 3 --bind unix:python-web.sock -m 007 wsgi:app
+
+[Install]
+WantedBy=multi-user.target
