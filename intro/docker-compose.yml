@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+  pythondb:
+    image: mysql:5
+    environment:
+        - MYSQL_DATABASE=pythondb
+        - MYSQL_USER=tesla
+        - MYSQL_ROOT_PASSWORD=t32la
+        - MYSQL_PORT=3306
+    ports:
+        - 3307:3306
+    volumes:
+    - ./mysql_data:/var/lib/mysql
+
