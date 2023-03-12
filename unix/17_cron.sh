@@ -4,3 +4,7 @@ crontrab -e
 
 
 */5 * * * * * echo "Hola, nos encontramos en el archivo crontrab" << /home/codigofacilito/archivos/crontab.txt
+
+crontab -e
+
+* * * * * python /home/codigofacilito/archivos/main.py
