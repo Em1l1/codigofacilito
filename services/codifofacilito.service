@@ -1,0 +1,8 @@
+[Unite]
+Description=Un servicio para un script en python
+
+[Service]
+WorkingDirectory=/home/codigofacilito/archivos
+
+[Install]
+WantedBy=default.target
