@@ -1,0 +1,1 @@
+scp tesla:/home/tesla/servidor.sh ./
