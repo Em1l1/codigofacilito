@@ -1,0 +1,10 @@
+[Unit]
+Description=Servicio que nos permite conocer el precio de una cripto.
+After=network.target
+
+[Service]
+WorkingDirectory=/home/codigoFacilito/archivos/project
+ExecStart=/home/codigoFacilito/archivos/env/bin/python bitcoin.py
+
+[Install]
+WantedBy=user.multi.target
