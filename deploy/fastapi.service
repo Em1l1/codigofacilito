@@ -1,0 +1,13 @@
+[Unit]
+Description=Servicio para el deploy de la aplicacion.
+After=network.target
+
+[Service]
+User=tesla
+Group=www-data
+WorkingDirectory=/home/tesla/project/FASTAPI_Project
+Environment="PATH=/home/tesla/project/FASTAPI_Project/env/bin"
+ExecStart=/home/tesla/project/FASTAPI_Project/env/bin/gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app
+
+[Install]
+WantedBy=multi.user.target
